@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Fname:</strong>
+  <%= @user.fname %>
+</p>
+
+<p>
+  <strong>Lname:</strong>
+  <%= @user.lname %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @user.password %>
+</p>
+
+<p>
+  <strong>Profile image:</strong>
+  <%= @user.profile_image %>
+</p>
+
+<p>
+  <strong>Profile text:</strong>
+  <%= @user.profile_text %>
+</p>
+
+<p>
+  <strong>Gather points:</strong>
+  <%= @user.gather_points %>
+</p>
+
+<p>
+  <strong>Privacy:</strong>
+  <%= @user.privacy %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>

@@ -1,0 +1,14 @@
+---
+applications:
+- name: easygather
+  memory: 5M
+  host: easygather
+  buildpack: ruby_buildpack
+  command: bundle exec rake VERBOSE=true
+  disk_quota: 100M
+  stack: cflinuxfs2
+  instances: 1
+  random-route: true
+  timeout: 180
+  env:
+      RAILS_ENV: production
