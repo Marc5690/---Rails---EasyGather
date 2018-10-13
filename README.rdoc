@@ -10,10 +10,17 @@ Roles were as follows:
 The instructions for running this app are below, they apply to Cloud Foundry:
 
 cf push --command 'bundle exec rake db:migrate db:seed && bundle exec rails s -p $PORT'
+
 cf push Easy_Gather -t 180 -m 1G -k 1G
+
 cf push Easy_Gather -t 180 -m 1G -k 1G  --command 'bundle exec rake db:migrate db:seed && bundle exec rails s -p 1234'
+
 cf push Easy_Gather -t 180 -m 1G -k 1G  -c "rails s -p 1234"
+
 cf push Easy_Gather -t 180 -m 1G -k 1G  -c "rails s -p $PORT"
+
 cf push Easy_Gather -t 180 -m 1G -k 1G  -c "bundle install rails s -p $PORT"
+
 cf delete-route mybluemix.net -n easy-gather
+
 cf push Easy_Gather -t 180 -m 1G -k 1G  -c "rails s -p $PORT" --no-route
